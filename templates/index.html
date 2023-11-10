@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API</title>
+</head>
+<body>
+    <h1>Choose a video and an integer variable</h1>
+
+    <form id="upload-form" action="/process_video" method="post" enctype="multipart/form-data">
+        <label for="video">Choose a video:</label>
+        <input type="file" name="video" accept="video/*" required>
+        
+        <label for="int_variable">Enter an integer variable:</label>
+        <input type="number" name="int_variable" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // You can add client-side JavaScript code here if needed
+    </script>
+</body>
+</html>
