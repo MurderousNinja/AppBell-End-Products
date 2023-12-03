@@ -16,6 +16,8 @@ Briefly describe the purpose and scope of your internship project.
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
 ## Features
 
@@ -55,5 +57,10 @@ This project is licensed under the MIT License.
 Mention any individuals, organizations, or resources that you would like to acknowledge or give credit to.
 
 ## Contact
+
+* **Email**: [patil.chinmay3031@gmail.com](mailto:patil.chinmay3031@gmail.com)
+* **Phone Number**: +91 866 846 1706
+* **LinkedIn**: [Chinmay Patil](https://www.linkedin.com/in/chinmay-patil-2ba27729b/)
+* **LinkTree**: [Chinmay Patil](https://linktr.ee/murderouscoder)
 
 Provide your contact information (email, social media) for anyone who has questions or wants to reach out regarding the project.
