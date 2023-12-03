@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SetupSignupActivity">
+
+    <RelativeLayout
+        android:id="@+id/layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:alpha="0.7"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/logo_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo_context" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="-20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="28dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/join_us_visible"
+                android:textColor="@color/my_primary"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_provide_details_for_signing_up_visible"
+                android:alpha="0.7"
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                />
+
+            <TextView
+                android:id="@+id/business_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/business_id_visible"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/businessID_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_check_24"
+                android:drawableStart="@drawable/outline_email_24"
+                android:alpha="0.7"
+                android:drawablePadding="10dp"
+                android:hint="@string/enter_business_id_hint"
+                android:autofillHints="Email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_visible"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/password_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/password_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_password_24"
+                    android:alpha="0.7"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/enter_password_hint"
+                    android:autofillHints="Password"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <ImageButton
+                    android:id="@+id/toggle_visibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_visibility_24"
+                    android:background="@color/design_default_color_on_primary"
+                    app:layout_constraintLeft_toLeftOf="@id/see_password_guide"
+                    app:layout_constraintRight_toRightOf="@id/see_password_guide"
+                    app:layout_constraintTop_toTopOf="@id/half_line"
+                    app:layout_constraintBottom_toBottomOf="@id/half_line"
+                    android:contentDescription="@string/set_visibility_context"
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/see_password_guide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95"
+                    />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/half_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/re_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/re_enter_password_visible"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/re_password_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/re_password_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_password_24"
+                    android:alpha="0.7"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/re_enter_password_hint"
+                    android:autofillHints="Password"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <ImageButton
+                    android:id="@+id/re_toggle_visibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_visibility_24"
+                    android:background="#FFFFFF"
+                    app:layout_constraintLeft_toLeftOf="@id/re_see_password_guide"
+                    app:layout_constraintRight_toRightOf="@id/re_see_password_guide"
+                    app:layout_constraintTop_toTopOf="@id/re_half_line"
+                    app:layout_constraintBottom_toBottomOf="@id/re_half_line"
+                    android:contentDescription="@string/set_visibility_context" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/re_see_password_guide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95"
+                    />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/re_half_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <CheckBox
+                    android:id="@+id/remember_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keep_me_signed_in_visible"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.7"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/sign_up_button"
+                android:textStyle="bold"
+                app:cornerRadius="32dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/or_log_in_instead_visible"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:alpha="0.5"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/log_in_button"
+                android:textStyle="bold"
+                app:cornerRadius="32dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
