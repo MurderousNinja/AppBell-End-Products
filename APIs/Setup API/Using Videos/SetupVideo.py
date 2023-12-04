@@ -35,7 +35,7 @@ import uvicorn
 from deepface.commons import functions
 
 # Set your Ngrok auth token here
-ngrok.set_auth_token("2VQ3N6dnV7bMo5PhJskNw6KOynM_43X2AJPHbCN42wdjt29jb")
+ngrok.set_auth_token("YOUR_TOKEN_HERE")
 
 # Constants
 
