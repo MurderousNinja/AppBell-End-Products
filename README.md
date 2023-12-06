@@ -2,65 +2,45 @@
 
 ## Project Title
 
-Face Recognition in Python for AppBell
+**Face Recognition in Python for AppBell**
 
 ## Project Description
 
-Briefly describe the purpose and scope of your internship project.
+At AppBell, I had the exciting opportunity to contribute to the development of a cutting-edge Face Recognition system using Python and an array of powerful libraries and tools. This project aimed to enhance the security and user experience of AppBell's applications by implementing robust and efficient face recognition capabilities.
 
 ## Table of Contents
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 ## Features
-
-List key features and functionalities of the project. 
+1. Secure Authentication: Implemented a secure and reliable authentication system based on face recognition, ensuring only authorized individuals gain access to AppBell's applications.
+2. Real-time Face Detection: Utilized RetinaFace for real-time face detection, enabling quick and accurate identification of faces in various scenarios.
+3. High Accuracy: Integrated DeepFace to achieve state-of-the-art face recognition accuracy, ensuring reliable identification even in challenging conditions.
+4. Scalable API: Developed a scalable and high-performance API using FastAPI, allowing seamless integration with AppBell's existing systems and future expansion.
 
 ## Installation
 
-Provide instructions on how to install and set up the project. Include any dependencies or prerequisites.
-
 ```bash
 # Example Installation Steps
-git clone [repository_url]
-cd [project_directory]
-npm install
+git clone MurderousNinja/AppBell-End-Products.git
+cd AppBell-End-Products
 ```
-
-## Usage
-
-Explain how to use your project. Include examples, screenshots, or code snippets to illustrate usage.
 
 ## Documentation
 
-Link to or provide documentation related to your project. This could include API documentation, user guides, or any other relevant information.
-
-## Contributing
-
-If applicable, provide guidelines for others who may want to contribute to your project. Include information about how to submit issues or pull requests.
-
-## License
-
-Specify the license under which your project is released. For example:
-
-This project is licensed under the MIT License.
+READMEs have been provided where necessary. Please do contact me for any questions or doubts you may have.
 
 ## Acknowledgements
 
-Mention any individuals, organizations, or resources that you would like to acknowledge or give credit to.
+My internship at AppBell provided me with valuable hands-on experience in developing advanced face recognition systems, honing my skills in Python, OpenCV, Ngrok, DeepFace, RetinaFace, and FastAPI. I am proud to have contributed to AppBell's commitment to innovation and security.
 
 ## Contact
 
 * **Email**: [patil.chinmay3031@gmail.com](mailto:patil.chinmay3031@gmail.com)
-* **Phone Number**: +91 866 846 1706
+* **Phone Number**: +91 8668461706
 * **LinkedIn**: [Chinmay Patil](https://www.linkedin.com/in/chinmay-patil-2ba27729b/)
 * **LinkTree**: [Chinmay Patil](https://linktr.ee/murderouscoder)
-
-Provide your contact information (email, social media) for anyone who has questions or wants to reach out regarding the project.
