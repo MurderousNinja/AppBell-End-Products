@@ -3,11 +3,12 @@
 Creating a comprehensive README.md for your Android app with multiple activities can greatly enhance its visibility and usability for potential users and contributors. Here's a template that you can use as a starting point. Feel free to customize it based on your app's specific details.
 
 
-# Your App Name
+# Main App
 
 Brief description of your app.
 
 ## Table of Contents
+
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
@@ -32,7 +33,8 @@ Provide instructions on how to set up and run your app locally.
 
 ### Prerequisites
 
-List any prerequisites that users need to install before using your app.
+  - Android Studio Giraffe | 2022.3.1
+  - Gradle 8.2
 
 ### Installation
 
@@ -49,10 +51,26 @@ List any prerequisites that users need to install before using your app.
 
 Explain how users can navigate through your app and showcase the different activities/screens available.
 
-### Activity 1
+### Home
 
-Describe the purpose of this activity and how users can interact with it.
+<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Home-Page.jpg" alt="Description of your image 1" width="200" height="200">
 
-### Activity 2
+### Recognition-Main
 
-Repeat the process for each activity in your app.
+<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Recognition-Main.jpg" alt="Description of your image 2" width="200" height="200">
+
+### Setup-Main
+
+<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Setup-Main.jpg" alt="Description of your image 3" width="200" height="200">
+
+### Setup-Processing
+
+<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Setup-Processing.jpg" alt="Description of your image 4" width="200" height="200">
+
+### SignIn-Page
+
+<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/SignIn-Page.jpg" alt="Description of your image 5" width="200" height="200">
+
+### SingUp-Page
+
+<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/SingUp-Page.jpg" alt="Description of your image 6" width="200" height="200">
