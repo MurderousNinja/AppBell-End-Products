@@ -25,7 +25,20 @@ Brief description of your app.
 
 ## Screenshots
 
-Include screenshots or gifs of your app in action to give users a visual overview.
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Home-Page.jpg" alt="Description of your image 1" width="200" height="433.898">
+  <img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Recognition-Main.jpg" alt="Description of your image 2" width="200" height="434.876">
+  <img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Setup-Main.jpg" alt="Description of your image 3" width="200" height="435.587">
+  <img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Setup-Processing.jpg" alt="Description of your image 4" width="200" height="434.876">
+  
+  Home-Page.jpg        Recognition-Main.jpg    
+  Setup-Main.jpg    
+  Setup-Processing.jpg    
+
+  
+  <img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/SignIn-Page.jpg" alt="Description of your image 5" width="200" height="433.808">
+  <img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/SingUp-Page.jpg" alt="Description of your image 6" width="200" height="435.587">
+</div>
 
 ## Getting Started
 
@@ -47,30 +60,22 @@ Provide instructions on how to set up and run your app locally.
 
 3. Build and run the app on an emulator or a physical device.
 
-## Usage
+## Description
 
 Explain how users can navigate through your app and showcase the different activities/screens available.
 
-### Home
 
-<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Home-Page.jpg" alt="Description of your image 1" width="200" height="200">
+### Home
 
 ### Recognition-Main
 
-<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Recognition-Main.jpg" alt="Description of your image 2" width="200" height="200">
-
 ### Setup-Main
-
-<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Setup-Main.jpg" alt="Description of your image 3" width="200" height="200">
 
 ### Setup-Processing
 
-<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/Setup-Processing.jpg" alt="Description of your image 4" width="200" height="200">
-
 ### SignIn-Page
-
-<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/SignIn-Page.jpg" alt="Description of your image 5" width="200" height="200">
 
 ### SingUp-Page
 
-<img src="https://github.com/MurderousNinja/AppBell-End-Products/blob/main/App/Screenshots/SingUp-Page.jpg" alt="Description of your image 6" width="200" height="200">
+
+
