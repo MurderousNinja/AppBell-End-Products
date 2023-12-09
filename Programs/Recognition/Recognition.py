@@ -6,11 +6,7 @@ import time
 import pickle
 from os import path
 
-from fastapi import FastAPI, UploadFile, Request, Response, File, Form
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from retinaface import RetinaFace
-from starlette.requests import Request
-from pyngrok import ngrok
 from deepface import DeepFace
 
 # 3rd party dependencies
@@ -245,17 +241,16 @@ class Cleanup:
         except Exception as e:
             print(f'An error occurred: {e}')
 
-def process_video(video_file: UploadFile, bid: int):
+def process_video(video_path: str, bid: int):
     # Save the uploaded video to a temporary directory
-    video_path = os.path.join(Config.UPLOADS_FOLDER, Config.VIDEO_NAME)
+    new_video_path = os.path.join(Config.UPLOADS_FOLDER, Config.VIDEO_NAME)
 
     # Cleanup or delete the temporary video file (if needed)
-    if os.path.exists(video_path):
-        os.remove(video_path)
-
-    with open(video_path, "wb") as f:
-        f.write(video_file.file.read())
-
+    if os.path.exists(new_video_path):
+        os.remove(new_video_path)
+        
+    os.rename(video_path, new_video_path)
+    
     fac = VideoManager()
     idd = FaceRecog()
 
@@ -288,4 +283,5 @@ def process_video(video_file: UploadFile, bid: int):
 
 if __name__ == "__main__":
     bid = input("Enter your Buisness ID: ")
-    process_video(bid)
+    video_path = input("Enter your Video Path: ")
+    process_video(video_path, bid)
