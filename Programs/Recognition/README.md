@@ -1,32 +1,86 @@
-# AppBell-Setup-API
+# AppBell-Recognition-Program
 
-## Introduction
-This FastAPI application is designed for real-time face recognition and representation using a webcam. It captures video frames from the webcam, detects faces using RetinaFace, and then represents the faces using the VGG-Face model. The processed faces are stored as embeddings in a pickle (PKL) file for future reference.
+# Overview
+
+This repository contains a Python script for face recognition in videos using the FastAPI framework. The script processes a video file, extracts faces from each frame, and performs face recognition to identify individuals. The face recognition is based on the VGG-Face model and supports multiple distance metrics.
+
+# Prerequisites
+
+Before using the script, make sure you have the following:
+
+1. Python installed (version 3.6 or later)
+2. DeepFace
+3. RetinaFace
+4. OpenCV
+
+# Usage
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/MurderousNinja/AppBell-Recognition.git
+   cd AppBell-Recognition
+   ```
+
+2. Install the required packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the script:
+
+   ```bash
+   python Recognition.py
+   ```
+
+   Follow the prompts to enter your Business ID (bid) and upload a video file for processing.
 
 # Code Description
 
+## Dependencies
+
+- `os`: Operating system interface.
+- `shutil`: File operations.
+- `concurrent.futures`: Asynchronous execution of tasks.
+- `cv2`: OpenCV for image processing.
+- `time`: Time-related functions.
+- `pickle`: Serialization and deserialization of Python objects.
+- `path` (from `os`): Path manipulation.
+- `FastAPI`: Web framework for building APIs.
+- `UploadFile`, `Request`, `Response`, `File`, `Form` (from `fastapi`): FastAPI components for handling HTTP requests and responses.
+- `HTMLResponse`, `JSONResponse`, `RedirectResponse` (from `fastapi.responses`): Response classes.
+- `RetinaFace`: Face detection library.
+- `ngrok`: Exposes local servers to the internet.
+- `DeepFace`: Face recognition library.
+- `pandas`: Data manipulation and analysis.
+
+## Configuration
+
+The `Config` class contains various configuration parameters, such as folder names, model names, and detection thresholds.
+
 ## Classes
 
-### 1. Webcam Recorder
-The WebcamRecorder class handles video recording from the webcam. It captures frames, saves them to the "Recorded" folder, and displays the frames in a window named 'Webcam Feed'.
+### `VideoManager`
 
-### 2. Face Extractor
-The FaceExtractor class uses RetinaFace to extract faces from recorded frames. It processes frames in parallel, selects the largest face from each frame, and saves it to the "Processing" folder.
+- `extract_faces_from_frame`: Extracts faces from a video frame using RetinaFace.
+- `process_video_to_faces`: Processes a video, extracts frames, and calls `extract_faces_from_frame` for face extraction.
 
-### 3. Deep Face Representation
-The Deep class handles deep face representation using a specified model (default is VGG-Face). It creates a PKL file containing face representations from the processed images.
+### `FaceRecog`
 
-### 4. Cleanup
-The Cleanup class provides a method to clean up recorded and processed directories, freeing up space after face extraction and representation.
+- `get_id_data`: Performs face recognition for a given image and Business ID (bid).
+- `sort_ids`: Appends face recognition results to a global list.
+- `get_ids_from_faces`: Processes a directory of face images using multiple threads and retrieves face IDs.
 
-### 5. FastAPI Web Application
-The FastAPI web application defines routes for user interaction:
+### `Cleanup`
 
-Home Route: Provides an HTML form to input user ID and business ID.
-Processing Video Route: Initiates video recording, face extraction, and deep face representation based on user input.
-Post-Processing Page Route: Displays a confirmation message after face representation is complete.
+- `clean`: Deletes specified directories and their contents.
 
-# Notes
-* The system uses ngrok to create a public URL. Make sure to set your ngrok auth token.
-* Adjust the configuration constants in the script as needed, such as the camera index, face detection threshold, and model name for face recognition.
-* The application cleans up recorded and processed frames automatically after face representation.
+## Functions
+
+- `find`: Performs face recognition for a given image and database path.
+- `process_video`: Processes an uploaded video file, performs face recognition, and returns results.
+
+# Note
+
+Make sure to handle sensitive information securely, as the script deals with face recognition and business-related IDs. Additionally, follow any legal and ethical considerations when using face recognition technology.
