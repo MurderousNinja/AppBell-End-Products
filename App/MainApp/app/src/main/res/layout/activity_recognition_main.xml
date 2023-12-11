@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecognitionMainActivity">
+
+    <TextView
+        android:id="@+id/text_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/result_text_view_guide"
+        app:layout_constraintBottom_toBottomOf="@id/result_text_view_guide"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_half"
+        app:layout_constraintRight_toRightOf="@id/vertical_half"
+        />
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_view2_guide"
+        app:layout_constraintBottom_toBottomOf="@id/text_view2_guide"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_half"
+        app:layout_constraintRight_toRightOf="@id/vertical_half"
+        />
+
+    <EditText
+        android:id="@+id/businessID_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/enter_your_business_id_hint"
+        app:layout_constraintTop_toTopOf="@id/businessID_field_guide"
+        app:layout_constraintBottom_toBottomOf="@id/businessID_field_guide"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_half"
+        app:layout_constraintRight_toRightOf="@id/vertical_half"
+        android:autofillHints="Business ID"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/file_picker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_a_file_button"
+        app:layout_constraintRight_toRightOf="@id/vertical_half"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_half"
+        app:layout_constraintTop_toTopOf="@id/file_picker_button_horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/file_picker_button_horizontal"
+        />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_recognition_button"
+        app:layout_constraintTop_toTopOf="@id/start_button_guide"
+        app:layout_constraintBottom_toBottomOf="@id/start_button_guide"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_half"
+        app:layout_constraintRight_toRightOf="@id/vertical_half"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/result_text_view_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/text_view2_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/businessID_field_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/file_picker_button_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_button_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+numpy
+opencv-python
+pyngrok
+tqdm
+deepface
+retina-face
