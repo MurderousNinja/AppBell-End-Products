@@ -6,7 +6,7 @@ pickle
 path
 python-multipart==0.0.6
 pandas==2.1.2
-starlette==0.27.0
+starlette==0.36.2
 retina-face==0.0.13
 uvicorn==0.13.1
 pyngrok==7.0.0
